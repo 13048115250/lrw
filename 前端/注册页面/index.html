@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+<title>注册</title>
+
+<style>
+	html,
+	body {
+		margin: 0px;
+		height: 100%;
+	}
+	
+	body {
+		background: #f1f1f1;
+		font-family: "Microsoft YaHei", "MicrosoftJhengHei", STHeiti, MingLiu;
+	}
+	
+	.div_c_l {
+		float: left;
+		padding: 5px;
+		font-size: 14px;
+		font-weight: 500;
+		text-align: right;
+		width: 80px;
+	}
+	
+	.div_c_l span {
+		line-height: 38px;
+		padding: 0 5px;
+		width: 60px;
+	}
+	
+	.div_c_l img {
+		height: 30px;
+		margin: 2px;
+		padding: 0px 7px;
+	}
+	
+	.div_c_r {
+		float: right;
+		padding: 5px;
+		width: calc(100% - 100px);
+		border-bottom: 1px solid #dddddd;
+	}
+	
+	.div_c_r input {
+		border: 0px;
+		margin: 5px;
+		float: right;
+		line-height: 28px;
+		font-size: 15px;
+		text-align: right;
+		padding-right: 5px;
+		width: 100%;
+		outline: none;
+		text-align: left;
+	}
+	
+	.div_c_r button {
+		width: 88px;
+		float: right;
+		background-color: #F2F2F2;
+		height: 28px;
+		padding: 4px 8px;
+		line-height: 20px;
+		font-size: 14px;
+		font-weight: 500;
+		margin: 5px 5px 0 0;
+		border: 1px solid #DBDBDB;
+		border-radius: 6px;
+		outline: none;
+	}
+	
+	.div_f {
+		background-color: #fff;
+	}
+	
+	.btn_1 {
+		border: none;
+		margin: 40px 6% 16px 6%;
+		width: 88%;
+		height: 1.8em;
+		background-color: #05a0e0;
+		border-radius: 4px;
+		font-size: 20px;
+		color: #FFFFFF;
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+	
+	.div_b_l {
+		float: left;
+		margin-left: 6%;
+		padding: 5px;
+		width: calc(44% - 10px);
+	}
+	
+	.div_b_r {
+		float: right;
+		margin-right: 6%;
+		padding: 5px;
+		width: calc(44% - 10px);
+		text-align: right;
+	}
+	
+	.span_b {
+		font-size: 16px;
+		font-weight: 500;
+		color: #000;
+		padding: 0 2px;
+		float: left;
+	}
+	
+	.span_br {
+		font-size: 16px;
+		font-weight: 500;
+		color: #05a0e0;
+		float: left;
+	}
+	
+	input[type=checkbox] {
+		visibility: hidden;
+	}
+	
+	.checkboxforget {
+		top: 0px;
+		float: left;
+		width: 20px;
+		height: 20px;
+		background: #05a0e0;
+		margin: 0 5px 0 0;
+		border-radius: 100%;
+		position: relative;
+	}
+	
+	.checkboxforget label {
+		display: block;
+		width: 18px;
+		height: 18px;
+		border-radius: 100px;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		transition: all .5s ease;
+		cursor: pointer;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		z-index: 1;
+		background: #fff;
+	}
+	
+	.checkboxforget input[type=checkbox]:checked+label {
+		background: #05a0e0;
+		width: 20px;
+		height: 20px;
+		top: 0px;
+		left: 0px;
+	}
+	
+	.inp_radio {
+		float: left;
+		line-height: 48px;
+	}
+	
+	input[type=radio] {
+		visibility: hidden;
+	}
+	
+	.checkboxforget1 {
+		top: 13px;
+		float: left;
+		width: 20px;
+		height: 20px;
+		background: #AFAFAF;
+		margin: 0 5px 0 0;
+		border-radius: 100%;
+		position: relative;
+	}
+	
+	.checkboxforget1 label {
+		display: block;
+		width: 18px;
+		height: 18px;
+		border-radius: 100px;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		transition: all .5s ease;
+		cursor: pointer;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		z-index: 1;
+		background: #fff;
+	}
+	
+	.checkboxforget1 input[type=radio]:checked+label {
+		background: #05a0e0;
+		width: 20px;
+		height: 20px;
+		top: 0px;
+		left: 0px;
+	}
+	
+	.red {
+		color: #ff6600;
+		display: inline-block;
+	}
+	.sign {
+		position: absolute;
+		z-index: 9;
+		width: 100%;
+		top: 15%;
+		transform: translate(0%, 0%);
+	}
+	.sign_a {
+		width: 850px;
+		height: auto;
+		margin: 0 auto;
+		background: #fff;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	.sign_top {
+		font-size: 30px;
+		color: #333333;
+		font-weight: 600;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+	.sign_er {
+		width: 370px;
+		margin:0 auto;
+		padding-bottom:100px;
+	}
+	.div_c_r img {
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+	.div_c_r .gen {
+        position: absolute;
+        z-index: 99;
+        right: 135px;
+        top: 48px;
+	}
+	.div_c_r  {
+		position: relative;
+	}
+	.sign_bottom {
+		text-align: center;
+		width: 100%;
+		line-height: 50px;
+		color: #667790;
+		position: absolute;
+		bottom: 0;
+		font-size: 12px;
+	}
+	.sing_re {
+		font-size: 14px;
+		color: #667790;
+		text-align: center;
+		width: 100%;
+	}
+	.sing_re a {
+		color: #0075ff;
+	}
+</style>
+
+</head>
+<body sroll="no" onclick="onload">
+	<div class="sign">
+        <div class=" sign_a">
+            <div class="sign_top">注册创客帐号</div>
+            <div class="sign_er">
+               <form name="form1" onsubmit="return checkreg()" action="homepage.html" method="post">
+               	    <div class="div_f">
+						<div class="div_col" id="me">
+							<div class="div_c_l"><span style="width:70px;">账号：</span>
+							</div>
+							<div class="div_c_r"><input type="tel" style="width:calc(100% - 16px);" id="phone" name="phone" onkeydown="" id="phone" value="" placeholder="请输入手机号码">
+								<span style="float: right;margin-top: -30px;background:#fff" id="tss"></span>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+
+					<div class="div_f">
+						<div class="div_col" id="me">
+							<div class="div_c_l"><span>密码：</span>
+							</div>
+							<div class="div_c_r"><input type="password" style="width:calc(100% - 16px);" name="password" id="password" onkeydown="" value="" placeholder="6~20位数字、字符任意组合">
+								<span style="float: right;margin-top: -30px;background:#fff" id="ts"></span></input>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<div class="div_f">
+						<div class="div_col" id="me">
+							<div class="div_c_l"><span style="width:70px;">确认密码：</span>
+							</div>
+							<div class="div_c_r"><input type="password" style="width:calc(100% - 16px);" name="passagain" id="Pwdagain" onkeydown="" value="" placeholder="请再次输入密码">
+								<span style="float: right;margin-top: -30px;background:#fff" id="tishi"></span></input>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					
+
+				    <div class="div_f">
+						<div class="div_col" id="me">
+							<div class="div_c_l"><span style="width:70px;">验证码：</span>
+							</div>
+							<div class="div_c_r"><input style="float: right;    text-align: center;font-size: 11px;padding: 4px 9px;width:calc(50% - 16px);background: #05a0e0;color: #fff;" id="dynamic" value="发送验证码" type="button" onclick="sendMessage(60)">
+								<input style="width:calc(50% - 10px);" type="tel" name="code" onblur="sub();" onkeydown="" id="code" placeholder="请输入验证码">
+								<span class="gen" style="margin-top: -30px;background:#fff" id="tsi"></span>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+				    <button id="submit" class="btn_1">注册</button>
+				    <div class="sing_re">已有帐号？<a href="#">直接登录</a></div>
+				</form>
+            </div>
+        </div>
+	</div>
+    <div class="sign_bottom">Copyright © 2010-2018 广州创客网络科技有限公司</div>
+
+<script type="text/javascript">
+	function checkreg() {
+		var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	
+		if(document.form1.password.value == "") {
+			document.getElementById("ts").innerHTML = "<font color='red'><img src='images/2.png'></font>";
+			form1.password.focus();
+			return false;
+		}
+		if(document.form1.password.value.length < 6 || document.form1.password.value.length > 20) {
+			document.getElementById("ts").innerHTML = "<font color='red'>密码长度限制在6-20位!</font>";
+			form1.password.focus();
+			return false;
+		}
+		document.getElementById("ts").innerHTML = "<font color='green'><img src='images/1.png'></font>";
+		if(document.form1.password.value != document.form1.Pwdagain.value) {
+			document.getElementById("tishi").innerHTML = "<font color='red'><img src='images/2.png'></font>";
+			form1.password.focus();
+			return false;
+		}
+		document.getElementById("tishi").innerHTML = "<font color='green'><img src='images/1.png'></font>";
+
+
+		if(!myreg.test(document.form1.phone.value)) {
+			document.getElementById("tss").innerHTML = "<font color='red'><img src='images/2.png'></font>";
+			form1.password.focus();
+			return false;
+		}
+		document.getElementById("tss").innerHTML = "<font color='green'><img src='images/1.png'></font>";
+		if(document.form1.code.value == "") {
+			 document.getElementById("tsi").innerHTML = "<font color='red'><img src='images/2.png'></font>";
+			form1.code.focus(); 
+			return false;
+		}
+		document.getElementById("tsi").innerHTML = "<font color='green'><img src='images/1.png'></font>";
+		location.href="homepage.html";
+	}
+
+	function sendMessage(t) {
+		var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+		if(!myreg.test(document.form1.phone.value)) 
+		{
+		 alert('请输入有效的手机号码！'); 
+		  return false; 
+		  } 
+		document.form1.dynamic.disabled = true;
+		for(i = 1; i <= t; i++) {
+			window.setTimeout("update_p(" + i + "," + t + ")", i * 1000);
+		}
+
+	}
+
+	function update_p(num, t) {
+		if(num == t) {
+			document.form1.dynamic.value = " 重新发送 ";
+			document.form1.dynamic.disabled = false;
+		} 
+		else {
+			printnr = t - num;
+			document.form1.dynamic.value = " (" + printnr + ")秒后重发";
+		}
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
